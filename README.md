@@ -89,6 +89,9 @@ kubectl get pods
 
 No resources found in default namespace.
 
+### Kubernetes Yaml Objesi olarak
+kubectl get ksvc hello -oyaml
+
 ### İşimiz bitti serverless uygulamamızı silelim.
 kn service delete hello
 

@@ -89,6 +89,12 @@ kubectl get pods
 
 No resources found in default namespace.
 
+### Kubernetes CRD sayesinde
+kubectl get ksvc
+
+NAME    URL                                       LATESTCREATED   LATESTREADY   READY   REASON
+hello   http://hello.default.185.3.93.24.xip.io   hello-v3        hello-v3      True
+
 ### Kubernetes Yaml Objesi olarak
 kubectl get ksvc hello -oyaml
 

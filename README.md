@@ -1,5 +1,7 @@
 # knative-demo
 
+https://knative.dev/docs/serving/
+
 ```sh
 ### Depoyu çekelim
 git clone https://github.com/dincerkurnaz/knative-demo.git

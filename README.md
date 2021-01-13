@@ -8,6 +8,7 @@ docker push dincerkurnaz/echo:v1
 
 ### kubernetes kontrol edelim
 kubectl get nodes
+
 NAME                          STATUS   ROLES    AGE    VERSION
 lke16824-20536-5ffee265d590   Ready    <none>   105s   v1.18.8
 
@@ -20,6 +21,7 @@ kubectl label namespace default istio-injection=enabled
 
 ### istio kurulumunu kontrol edelim
 kubectl get ns
+
 NAME              STATUS   AGE
 default           Active   4m18s
 istio-system      Active   48s
@@ -36,6 +38,7 @@ kubectl apply --filename https://github.com/knative/serving/releases/download/v0
 
 ### Knative kontrol edelim
 kubectl get pods -n knative-serving
+
 NAME                                READY   STATUS      RESTARTS   AGE
 activator-7dc7bc9d8-gltpj           1/1     Running     0          54s
 autoscaler-598bc966b4-rjkct         1/1     Running     0          53s
@@ -48,6 +51,7 @@ webhook-dfc6974b-cstbs              1/1     Running     0          53s
 
 ### İlk serverless uygulamamızı deploy edelim
 kn service create hello --image dincerkurnaz/echo:v1 # --namespace hello
+
 Creating service 'hello' in namespace 'default':
 
   0.022s The Configuration is still working to reflect the latest desired specification.
@@ -70,6 +74,7 @@ kn service update hello --revision-name hello-v3 --tag hello-v3=test --env TARGE
 kn service describe hello
 
 kn route describe hello
+
 http://test-hello.default.185.3.93.24.xip.io/
 
 ### Stress testi yapalım
@@ -79,6 +84,7 @@ kubectl get pods -w
 
 ### İstek yokken Pod ları kontrol edelim Pod zero yu gözlemleyelim. 
 kubectl get pods
+
 No resources found in default namespace.
 
 ### İşimiz bitti serverless uygulamamızı silelim.

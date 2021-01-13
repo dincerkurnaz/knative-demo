@@ -1,4 +1,4 @@
-# knative-demo
+# knative demo
 
 https://knative.dev/docs/serving/
 

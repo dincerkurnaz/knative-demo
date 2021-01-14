@@ -105,6 +105,6 @@ kn service delete hello
 kn service create image --image h2non/imaginary --arg="-enable-url-source" --concurrency-limit=10
 
 http://image.default.185.3.93.24.xip.io/form
-http://image.default.185.3.93.24.xip.io/crop?width=500&height=400&url=https://raw.githubusercontent.com/h2non/imaginary/master/testdata/large.jpg&type=webp
+http://image.default.185.3.93.24.xip.io/crop?width=500&height=400&url=https://raw.githubusercontent.com/h2non/imaginary/master/testdata/large.jpg&type=webp&quality=90
 
 ```

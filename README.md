@@ -129,7 +129,7 @@ kubectl get ksvc hello -oyaml
 kn service delete hello
 
 ### microservice image processing
-kn service create image --image h2non/imaginary --arg="-enable-url-source" --concurrency-limit=10
+kn service create image --image h2non/imaginary --arg="-enable-url-source" --concurrency-limit=10 # eger Zero olmasın cold-start biraz hızlı olsun isteniyorsa --scale-min=1 ekleyebiliriz.
 
 http://image.default.185.3.93.24.xip.io/form
 http://image.default.185.3.93.24.xip.io/crop?width=500&height=400&url=https://raw.githubusercontent.com/h2non/imaginary/master/testdata/large.jpg&type=webp&quality=90

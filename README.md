@@ -51,6 +51,19 @@ istio-webhook-75cc84fbd4-b4rn5      1/1     Running     0          45s
 networking-istio-6dcbd4b5f4-2k8kl   1/1     Running     0          45s
 webhook-dfc6974b-cstbs              1/1     Running     0          53s
 
+### https://github.com/knative/client
+kn version
+
+Version:      v20210111-c795f213
+Build Date:   2021-01-11 10:43:07
+Git Revision: c795f213
+Supported APIs:
+* Serving
+  - serving.knative.dev/v1 (knative-serving v0.19.0)
+* Eventing
+  - sources.knative.dev/v1alpha2 (knative-eventing v0.19.0)
+  - eventing.knative.dev/v1beta1 (knative-eventing v0.19.0)
+
 ### İlk serverless uygulamamızı deploy edelim
 kn service create hello --image dincerkurnaz/echo:v1 # --namespace hello
 

@@ -70,14 +70,28 @@ http://hello.default.185.3.93.24.xip.io
 kn service update hello --concurrency-limit=1
 kn service update hello --revision-name hello-v1 --concurrency-limit=0
 kn service update hello --revision-name hello-v2 --env TARGET="dincer"
+
+kn revision list
+NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE     CONDITIONS   READY   REASON
+hello-v2        hello     100%             3            24s     4 OK / 4     True
+hello-v1        hello                      2            86s     3 OK / 4     True
+hello-mphzp-1   hello                      1            2m35s   3 OK / 4     True
+
 kn service update hello --traffic hello-v1=50,hello-v2=50
+
+kn revision list
+NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE     CONDITIONS   READY   REASON
+hello-v2        hello     50%              3            2m16s   4 OK / 4     True
+hello-v1        hello     50%              2            3m18s   4 OK / 4     True
+
 kn service update hello --revision-name hello-v3 --tag hello-v3=test --env TARGET="dincer test"
+
+curl http://test-hello.default.185.3.93.24.xip.io/
+Hello dincer test!
 
 kn service describe hello
 
 kn route describe hello
-
-http://test-hello.default.185.3.93.24.xip.io/
 
 ### Stress testi yapalım
 hey -z 30s -c 50 "http://hello.default.185.3.93.24.xip.io/" 

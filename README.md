@@ -134,4 +134,8 @@ kn service create image --image h2non/imaginary --arg="-enable-url-source" --con
 http://image.default.185.3.93.24.xip.io/form
 http://image.default.185.3.93.24.xip.io/crop?width=500&height=400&url=https://raw.githubusercontent.com/h2non/imaginary/master/testdata/large.jpg&type=webp&quality=90
 
+kubectl apply -f image.yaml
+
+kn service update image --scale-min=1
+
 ```

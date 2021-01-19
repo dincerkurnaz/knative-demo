@@ -64,6 +64,7 @@ Supported APIs:
   - sources.knative.dev/v1alpha2 (knative-eventing v0.19.0)
   - eventing.knative.dev/v1beta1 (knative-eventing v0.19.0)
 
+### Imperative Yöntem
 ### İlk serverless uygulamamızı deploy edelim
 kn service create hello --image dincerkurnaz/echo:v1 # --namespace hello
 
@@ -134,6 +135,7 @@ kn service create image --image h2non/imaginary --arg="-enable-url-source" --con
 http://image.default.185.3.93.24.xip.io/form
 http://image.default.185.3.93.24.xip.io/crop?width=500&height=400&url=https://raw.githubusercontent.com/h2non/imaginary/master/testdata/large.jpg&type=webp&quality=90
 
+### Declarartive yöntem
 kubectl apply -f image.yaml
 
 kn service update image --scale-min=1

@@ -140,4 +140,12 @@ kubectl apply -f image.yaml
 
 kn service update image --scale-min=1
 
+###APP
+kubectl apply -f mongo.yaml -f node.yaml
+
+kn service list
+NAME       URL                                           LATEST           AGE     CONDITIONS   READY   REASON
+image      http://image.default.185.3.92.208.xip.io      image-797ss      45h     3 OK / 3     True
+todo-app   http://todo-app.default.185.3.92.208.xip.io   todo-app-b98l5   7m45s   3 OK / 3     True
+
 ```

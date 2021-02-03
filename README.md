@@ -1,5 +1,10 @@
 # Knative Serving Serverles ( FaaS ) Demo
 
+```sh
+git tag 1.0.0
+git push --tags
+```
+
 https://knative.dev/docs/serving/
 
 ```sh

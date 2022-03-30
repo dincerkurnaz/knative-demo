@@ -13,7 +13,7 @@ git clone https://github.com/dincerkurnaz/knative-demo.git
 docker build -t dincerkurnaz/echo:v1 .
 docker push dincerkurnaz/echo:v1
 
-### kubernetes kontrol edelim
+### kubernetes kontrol edelim.
 kubectl get nodes
 
 NAME                          STATUS   ROLES    AGE    VERSION
